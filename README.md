@@ -5,7 +5,7 @@
 [![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](LICENSE)
 [![OpenAI](https://img.shields.io/badge/OpenAI-GPT--4-black?style=for-the-badge&logo=openai)](https://openai.com)
 
-> A production-ready, multi-tenant SaaS starter kit built with **Laravel 11**, **Vue 3**, **Stripe**, and **OpenAI**. Launch your SaaS product in days, not months.
+> A production-ready, multi-tenant SaaS starter kit built with **Laravel 12**, **Vue 3**, **Stripe**, and **OpenAI**. Launch your SaaS product in days, not months.
 
 ---
 
@@ -59,7 +59,7 @@
 
 | Layer | Technology |
 |-------|-----------|
-| Backend | Laravel 11 |
+| Backend | Laravel 12 |
 | Frontend | Vue 3 + Inertia.js |
 | Styling | Tailwind CSS |
 | Database | MySQL + Redis |
@@ -239,8 +239,8 @@ MIT License — feel free to use for personal and commercial projects.
 
 ## 👨‍💻 Author
 
-**Your Name** — Laravel & Vue.js Developer  
-🔗 [LinkedIn](https://linkedin.com) | 🐦 [Twitter](https://twitter.com) | 💼 [Portfolio](https://yourportfolio.com)
+**Hardik Shyara** — Laravel & Vue.js Developer  
+🔗 [LinkedIn](https://linkedin.com)
 
 ---
 

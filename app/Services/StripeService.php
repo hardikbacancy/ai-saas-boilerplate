@@ -50,9 +50,22 @@ class StripeService
             throw new \InvalidArgumentException("Plan '{$plan}' is not valid.");
         }
 
+        // Cashier requires a Stripe customer before adding a payment method.
+        if (! $team->hasStripeId()) {
+            $team->createAsStripeCustomer([
+                'name' => $team->name,
+                'email' => $team->owner?->email ?? config('mail.from.address'),
+            ]);
+        }
+
         // Add payment method to Stripe customer
         $team->addPaymentMethod($paymentMethodId);
         $team->updateDefaultPaymentMethod($paymentMethodId);
+
+        if ($team->subscribed('default')) {
+            $team->subscription('default')->swap($plans[$plan]['stripe_id']);
+            return $team->subscription('default');
+        }
 
         return $team->newSubscription('default', $plans[$plan]['stripe_id'])->create($paymentMethodId);
     }
